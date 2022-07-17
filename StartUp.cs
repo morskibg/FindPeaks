@@ -74,8 +74,7 @@ namespace FindPeaks
             Match match = rx.Match(inputData);
             if(match.Success)            
             {                                   
-                var nums =  Array.ConvertAll(match.Groups["nums"].Value.Trim().Split(','),Convert.ToInt64);                
-                var upperLimit = nums.Count() - 1;
+                var nums =  Array.ConvertAll(match.Groups["nums"].Value.Trim().Split(','),Convert.ToInt64);                 
                 var result = new List<string>();
                 long left = long.MinValue;
                 long right = long.MinValue;                
